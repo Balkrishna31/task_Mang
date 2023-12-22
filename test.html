@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Section</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+        }
+
+        #section1, #section2, #section3 {
+            height: 100vh;
+            background-color: #ddd;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="scrollToSection('section1')">Go to Section 1</button>
+    <button onclick="scrollToSection('section2')">Go to Section 2</button>
+    <button onclick="scrollToSection('section3')">Go to Section 3</button>
+
+    <div id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content of Section 1.</p>
+    </div>
+
+    <div id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content of Section 2.</p>
+    </div>
+
+    <div id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content of Section 3.</p>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
